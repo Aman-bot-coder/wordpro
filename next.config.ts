@@ -1,14 +1,11 @@
 import type { NextConfig } from "next";
 
-const repoName = "wordpro";
-const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-
 const nextConfig: NextConfig = {
-  output: "export",
-  trailingSlash: true,
+  // Self-hosted on a VPS: emit a minimal standalone server bundle.
+  output: "standalone",
   images: { unoptimized: true },
-  basePath: isGithubActions ? `/${repoName}` : undefined,
-  assetPrefix: isGithubActions ? `/${repoName}/` : undefined,
+  // `pg` is a native-ish server dependency — keep it external to the bundle.
+  serverExternalPackages: ["pg"],
 };
 
 export default nextConfig;
