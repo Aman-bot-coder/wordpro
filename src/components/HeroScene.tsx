@@ -102,8 +102,8 @@ export function HeroScene() {
 
   if (failed) {
     return (
-      <div className="flex aspect-square w-full items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-soft-blue)] to-white">
-        <div className="eyebrow text-royal">AUTHORITY NETWORK</div>
+      <div className="flex aspect-square w-full items-center justify-center rounded-full bg-gradient-to-br from-royal/20 to-transparent">
+        <div className="eyebrow text-white/70">AUTHORITY NETWORK</div>
       </div>
     );
   }
@@ -150,7 +150,7 @@ export function HeroScene() {
         return (
           <div
             key={label}
-            className="glass eyebrow absolute -translate-x-1/2 -translate-y-1/2 rounded-full px-3 py-1.5 text-navy/70"
+            className="glass-dark eyebrow absolute -translate-x-1/2 -translate-y-1/2 rounded-full px-3 py-1.5 text-white/75"
             style={{ left: `${x}%`, top: `${y}%`, animation: `float 6s ease-in-out ${i * 0.4}s infinite` }}
           >
             {label}

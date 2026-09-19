@@ -22,22 +22,43 @@ export const metadata: Metadata = {
   title: "Narrative Infrastructure for Founders",
 };
 
+const problemShift = [
+  {
+    label: "Silence",
+    note: "The work is real, but nothing surfaces when someone looks you up.",
+    dot: "border-navy/25",
+  },
+  {
+    label: "Visibility",
+    note: "Your thinking shows up where investors, buyers and talent already search.",
+    dot: "border-royal",
+  },
+  {
+    label: "Authority",
+    note: "You're the reference point — chosen before the first conversation happens.",
+    dot: "border-[var(--color-yellow)]",
+  },
+];
+
 export default function Home() {
   return (
     <>
       {/* 01 HERO */}
-      <section className="grid-texture relative overflow-hidden px-6 pb-24 pt-40 md:pt-48">
-        <div className="pointer-events-none absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-royal/10 blur-[140px]" />
-        <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+      <section className="grid-texture-dark noise relative overflow-hidden bg-navy px-6 pb-24 pt-40 md:pt-48">
+        <div className="pointer-events-none absolute -top-40 right-0 h-[600px] w-[600px] rounded-full bg-royal/30 blur-[140px]" />
+        <div className="pointer-events-none absolute -bottom-40 left-0 h-[400px] w-[400px] rounded-full bg-[var(--color-yellow)]/5 blur-[140px]" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
           <div>
-            <div className="eyebrow text-royal">{hero.eyebrow}</div>
-            <h1 className="text-balance mt-6 text-[13vw] font-semibold leading-[0.98] tracking-tight text-navy sm:text-6xl lg:text-[4.6vw]">
+            <div className="eyebrow text-[13px] font-semibold tracking-[0.2em] text-[var(--color-yellow)] md:text-sm">
+              {hero.eyebrow}
+            </div>
+            <h1 className="text-balance mt-6 text-[13vw] font-semibold leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-[4.6vw]">
               {hero.headline}
             </h1>
-            <p className="mt-8 max-w-lg text-lg leading-relaxed text-gray-dark">{hero.sub}</p>
+            <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/70">{hero.sub}</p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button href="/contact">{hero.ctaPrimary}</Button>
-              <Button href="/the-system" variant="secondary">
+              <Button href="/the-system" variant="outlineLight">
                 {hero.ctaSecondary}
               </Button>
             </div>
@@ -47,16 +68,22 @@ export default function Home() {
       </section>
 
       {/* 02 TRUST / AUTHORITY SIGNAL */}
-      <section className="border-y border-navy/5 bg-gray-light px-6 py-16">
-        <div className="mx-auto max-w-7xl">
-          <div className="eyebrow text-center text-gray-dark">Why authority compounds</div>
-          <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
-            {stats.slice(0, 4).map((s) => (
-              <Reveal key={s.label} className="text-center">
-                <div className="text-3xl font-bold text-navy md:text-4xl">
+      <section className="relative overflow-hidden border-y border-royal/10 bg-gradient-to-b from-[var(--color-soft-blue)] via-[var(--color-soft-blue)] to-white px-6 py-16">
+        <div className="pointer-events-none absolute left-1/2 top-0 h-[300px] w-[700px] -translate-x-1/2 rounded-full bg-royal/10 blur-[120px]" />
+        <div className="relative mx-auto max-w-7xl">
+          <div className="eyebrow text-center text-royal/70">Why authority compounds</div>
+          <div className="mt-10 grid grid-cols-2 gap-y-10 md:grid-cols-4">
+            {stats.slice(0, 4).map((s, i) => (
+              <Reveal
+                key={s.label}
+                className={`px-4 text-center md:px-6 ${
+                  i > 0 ? "md:border-l md:border-royal/15" : ""
+                }`}
+              >
+                <div className="text-3xl font-bold text-royal md:text-4xl">
                   <AnimatedCounter value={s.value} />
                 </div>
-                <p className="mt-2 text-xs leading-snug text-gray-dark">{s.label}</p>
+                <p className="mt-2 text-xs leading-snug text-navy/60">{s.label}</p>
               </Reveal>
             ))}
           </div>
@@ -65,14 +92,42 @@ export default function Home() {
 
       {/* 03 THE PROBLEM */}
       <section className="px-6 py-32">
-        <div className="mx-auto max-w-7xl">
-          <Reveal>
-            <SectionHeader
-              index="03"
-              eyebrow="The Problem"
-              title="The gap between building something remarkable and being known for it."
-              body="Founders intend to publish. Shipping takes priority — it's a prioritization problem, not a discipline issue. That gap is exactly what wrds.pro is built to close. Permanently."
-            />
+        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-12 lg:gap-20">
+          <Reveal className="lg:col-span-7">
+            <div className="eyebrow flex items-center gap-3 text-royal">
+              <span className="opacity-60">03</span>
+              <span>The Problem</span>
+            </div>
+            <h2 className="text-balance mt-4 text-4xl font-semibold leading-[1.08] tracking-tight text-navy md:text-5xl">
+              The gap between building something remarkable and being known for it.
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-gray-dark">
+              Founders intend to publish. Shipping takes priority — it&apos;s a prioritization
+              problem, not a discipline issue. That gap is exactly what wrds.pro is built to close.
+              Permanently.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.12} className="lg:col-span-5">
+            <div className="glass relative h-full rounded-2xl p-8">
+              <div className="eyebrow text-navy/40">The shift</div>
+              <div className="relative mt-8 space-y-9 pl-8">
+                <span
+                  aria-hidden
+                  className="absolute bottom-3 left-[5px] top-3 w-px bg-gradient-to-b from-navy/15 via-royal/50 to-[var(--color-yellow)]"
+                />
+                {problemShift.map((step) => (
+                  <div key={step.label} className="relative">
+                    <span
+                      aria-hidden
+                      className={`absolute -left-8 top-1.5 h-[11px] w-[11px] rounded-full border-2 bg-white ${step.dot}`}
+                    />
+                    <div className="text-base font-semibold text-navy">{step.label}</div>
+                    <div className="mt-1 text-sm leading-relaxed text-gray-dark">{step.note}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>

@@ -6,7 +6,7 @@ import { ReactNode, useRef, useState } from "react";
 type Props = {
   href: string;
   children: ReactNode;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "outlineLight" | "ghost";
   className?: string;
 };
 
@@ -28,6 +28,7 @@ export function Button({ href, children, variant = "primary", className = "" }: 
   const styles = {
     primary: "bg-[var(--color-yellow)] text-navy hover:bg-[var(--color-yellow-bright)]",
     secondary: "border border-navy/15 text-navy hover:border-navy/40",
+    outlineLight: "border border-white/25 text-white hover:border-white/60 hover:bg-white/5",
     ghost: "text-white/90 hover:text-white",
   };
 

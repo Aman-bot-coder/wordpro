@@ -1,13 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { nav, site } from "@/lib/content";
 
+// Routes whose hero sits on a dark background — the nav inverts until scrolled.
+const DARK_HERO_ROUTES = ["/"];
+
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const onLight = DARK_HERO_ROUTES.includes(pathname) && !scrolled;
 
   useEffect(() => {
     function onScroll() {
@@ -25,7 +31,12 @@ export function Nav() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6">
-        <Link href="/" className="text-lg font-bold tracking-tight text-navy">
+        <Link
+          href="/"
+          className={`text-lg font-bold tracking-tight transition-colors duration-500 ${
+            onLight ? "text-white" : "text-navy"
+          }`}
+        >
           {site.name}
         </Link>
 
@@ -34,7 +45,9 @@ export function Nav() {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="eyebrow text-navy/70 transition-colors hover:text-royal"
+                className={`eyebrow transition-colors duration-500 ${
+                  onLight ? "text-white/70 hover:text-white" : "text-navy/70 hover:text-royal"
+                }`}
               >
                 {item.label}
               </Link>
@@ -45,7 +58,11 @@ export function Nav() {
         <div className="hidden lg:block">
           <Link
             href="/contact"
-            className="eyebrow rounded-full bg-navy px-5 py-2.5 text-white transition-colors hover:bg-royal"
+            className={`eyebrow rounded-full px-5 py-2.5 transition-colors duration-500 ${
+              onLight
+                ? "bg-[var(--color-yellow)] text-navy hover:bg-[var(--color-yellow-bright)]"
+                : "bg-navy text-white hover:bg-royal"
+            }`}
           >
             Book Authority Audit
           </Link>
@@ -56,8 +73,8 @@ export function Nav() {
           className="flex flex-col gap-1.5 lg:hidden"
           onClick={() => setOpen(true)}
         >
-          <span className="block h-[1.5px] w-6 bg-navy" />
-          <span className="block h-[1.5px] w-6 bg-navy" />
+          <span className={`block h-[1.5px] w-6 ${onLight ? "bg-white" : "bg-navy"}`} />
+          <span className={`block h-[1.5px] w-6 ${onLight ? "bg-white" : "bg-navy"}`} />
         </button>
       </nav>
 
