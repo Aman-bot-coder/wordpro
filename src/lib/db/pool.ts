@@ -1,4 +1,4 @@
-import { Pool, type QueryResultRow } from "pg";
+import mysql, { type Pool, type RowDataPacket } from "mysql2/promise";
 
 // A single shared pool. In dev, Next.js hot-reloads modules, so the pool is
 // stashed on globalThis to avoid exhausting connections on every reload.
@@ -8,17 +8,15 @@ export function getPool(): Pool | null {
   if (!process.env.DATABASE_URL) return null;
 
   if (!globalForDb.__seoPool) {
-    globalForDb.__seoPool = new Pool({
-      connectionString: process.env.DATABASE_URL,
-      max: 10,
-      idleTimeoutMillis: 30_000,
-      connectionTimeoutMillis: 5_000,
+    globalForDb.__seoPool = mysql.createPool({
+      uri: process.env.DATABASE_URL,
+      connectionLimit: 10,
+      idleTimeout: 30_000,
+      connectTimeout: 5_000,
+      namedPlaceholders: false,
       ...(process.env.DATABASE_SSL === "true"
         ? { ssl: { rejectUnauthorized: false } }
         : {}),
-    });
-    globalForDb.__seoPool.on("error", (err) => {
-      console.error("[seo-db] idle client error:", err.message);
     });
   }
 
@@ -30,7 +28,7 @@ export function getPool(): Pool | null {
  * is unreachable or unconfigured, so the public site always falls back to the
  * compiled-in defaults rather than erroring.
  */
-export async function query<T extends QueryResultRow>(
+export async function query<T extends RowDataPacket>(
   text: string,
   params: unknown[] = []
 ): Promise<T[] | null> {
@@ -38,8 +36,8 @@ export async function query<T extends QueryResultRow>(
   if (!pool) return null;
 
   try {
-    const result = await pool.query<T>(text, params);
-    return result.rows;
+    const [rows] = await pool.query<T[]>(text, params);
+    return rows;
   } catch (error) {
     console.error("[seo-db] query failed:", (error as Error).message);
     return null;
@@ -47,14 +45,10 @@ export async function query<T extends QueryResultRow>(
 }
 
 /** Same as `query`, but surfaces the error — used by admin writes. */
-export async function mutate<T extends QueryResultRow>(
-  text: string,
-  params: unknown[] = []
-): Promise<T[]> {
+export async function mutate(text: string, params: unknown[] = []): Promise<void> {
   const pool = getPool();
   if (!pool) throw new Error("DATABASE_URL is not configured.");
-  const result = await pool.query<T>(text, params);
-  return result.rows;
+  await pool.query(text, params);
 }
 
 export async function isDatabaseReachable(): Promise<boolean> {
