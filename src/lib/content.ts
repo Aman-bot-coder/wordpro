@@ -20,62 +20,155 @@ export const nav = [
   { label: "Pricing", href: "/pricing" },
 ];
 
+// Homepage — verbatim from the Wrds.Pro homepage doc.
 export const hero = {
-  eyebrow: "LinkedIn · SEO · AEO · GEO · AI Search",
-  headline: "Let wrds.pro build your brand's authority and visibility.",
-  sub: "wrds.pro builds authority across LinkedIn, Google Search and AI models — guaranteed human-written AI-search and SEO content that grows your presence on the channels that matter most. You provide the idea; we provide the tools.",
+  eyebrow: "LinkedIn Marketing, GEO, AEO, AI Search and SEO Content for Businesses",
+  headline: "Let Wrds.Pro Build Your Brand's Authority and Increase Visibility",
+  sub: "Wrds.Pro builds authority for your business across LinkedIn, Google Search, and AI models. We guarantee human-written AI search and SEO content for businesses that help your brand grow its online presence across the digital channels that matter most to your business. Spanning LinkedIn marketing, LinkedIn ghostwriting and blogs to SEO, AEO and GEO-optimised content, you provide the idea, we provide the tools.",
   ctaPrimary: "Book Your Authority Audit",
   ctaSecondary: "Explore the System",
 };
 
 export const homeDiscovery = {
-  title: "Three discovery layers, one service.",
-  body: "For your brand to be identifiable, distinguished and authoritative, it must be the go-to option in three places.",
+  title: "Three Discovery Layers, One Service",
+  body: "For your brand to be identifiable, distinguished and authoritative, it must be visible and the go-to option in three places:",
   layers: [
     {
       k: "LinkedIn",
-      v: "Buyers decide if you're the authority brand they're looking for based on the strength of your posts and articles.",
+      v: "Buyers decide if you're the authority brand that they're looking for based on the strength of your posts and articles",
     },
     {
       k: "Google",
-      v: "You show up as the top result when readers search for solutions — with the answers found in your pages and content.",
+      v: "You'll pop up as the top dog when readers search for solutions to problems with the answers found in your pages and content",
     },
     {
       k: "AI",
-      v: "You need to be one of the top companies referenced by AI as a trusted source.",
+      v: "You need to be one of the top three companies referenced by AI as a trusted source",
     },
   ],
+  closing: "That's where Wrds.Pro comes in.",
+};
+
+export const homeSubServices = [
+  {
+    k: "LinkedIn Marketing and Ghostwriting",
+    v: "Human content driven by your knowledge, experience and ideas. With a strong LinkedIn presence built by Wrds.Pro, your investors and customers will know what you're all about right from the start.",
+  },
+  {
+    k: "Classic SEO-Optimized Search Ranking",
+    v: "When a reader types in a problem, your brand is what they should see. Wrds.Pro helps build topical authority, with E-E-A-T signals interwoven directly into articles published under your name.",
+  },
+  {
+    k: "The AI Revolution: AEO and GEO",
+    v: "Wrds.Pro structures your content so Gemini, ChatGPT, Perplexity, Claude and other AI models cite your brand whenever any customer wants to know who the credible authority is in your space. AI search visibility is now just as critical as ranking in classic search engines.",
+  },
+  {
+    k: "Website Development",
+    v: "Our emphasis is on building and fixing websites with the right approach so that they are technically clean, structured for both search crawlers and AI answer engines, and built to convert visitors into leads.",
+  },
+];
+
+export const homeServices = {
+  title: "All Services in One Place",
+  body: "Authority building on LinkedIn only works well if the rest of your digital presence is strong enough to back it. Our team also handles:",
+  items: [
+    { k: "Website Development", v: "Sites developed for quick load times, clear readability, and excellent performance in search." },
+    { k: "Website Content", v: "Service pages, product pages, and landing pages that turn your visitors into customers." },
+    { k: "Social Media", v: "Curated content for your profiles on Instagram, Facebook, and X that sounds like your brand voice, not a template." },
+    { k: "Reddit", v: "Genuine participation in the communities that your buyers trust; this significantly shapes what AI tools say about your business." },
+    { k: "Paid Advertising", v: "Running campaigns on Google and social platforms, built with a focus on achieving the set targets and reported honestly." },
+  ],
+  note: "Dedicated Team, Strategic Plan, and a Single Point of Contact",
+};
+
+export const homeWhy = {
+  title: "Why Wrds.Pro?",
+  body: "Trust is now the most important thing to customers. With AI answer engines now forming the majority of search results, now is the time to ensure that your brand is one of the few chosen to represent your field as a trustworthy, credible source.",
 };
 
 export const homeSearchFocus = {
-  title: "SEO, AEO, GEO: where should the focus be?",
-  body: "All three are included in a wrds.pro plan. Nobody relies solely on Google anymore — searches are split across multiple fronts, each with its own rewards for your brand.",
+  title: "SEO, AEO, GEO: Where Should the Focus Be?",
+  body: "All three are included in a Wrds.Pro plan. Nobody relies solely on Google anymore. Searches are split across multiple fronts, each with its own rewards for your brand.",
   items: [
     {
-      k: "SEO — Search Engine Optimisation",
-      v: "We structure your website and content to rank in traditional search engines. GEO and AEO are built on top of SEO, which remains the largest channel.",
+      k: "SEO – Search Engine Optimisation",
+      v: "Wrds.Pro structures your website and content so it appears visually appealing to traditional crawlers and ranks highly in traditional search engines. Both GEO and AEO are built on top of SEO, which remains the largest channel, so we focus intently on SEO for AI models.",
     },
     {
-      k: "AEO — Answer Engine Optimisation",
-      v: "We produce content AI answer engines — including Google AI Overview — pick up as direct answers, with snippets built to be chosen ahead of a competitor's.",
+      k: "AEO – Answer Engine Optimisation",
+      v: "Wrds.Pro produces content that can easily be picked up by AI answer engines. These platforms, including Google AI Overview, give users a direct answer. Wrds.Pro focuses on snippets that aid your business in being chosen ahead of a competitor's.",
     },
     {
-      k: "GEO — Generative Engine Optimisation",
-      v: "We structure fact-based content so LLMs cite your brand as a source inside their AI-generated outputs.",
+      k: "GEO – Generative Engine Optimisation",
+      v: "Wrds.Pro structures your content so it is easily picked up by LLMs, citing your brand as sources inside its AI-generated outputs. We focus on largely fact-based content here to ensure your content is chosen.",
     },
   ],
 };
 
-export const homeServices = {
-  title: "All services in one place.",
-  body: "Authority building on LinkedIn only works well if the rest of your digital presence is strong enough to back it. Our team also handles:",
-  items: [
-    { k: "Website Development", v: "Sites developed for quick load times, clear readability and excellent search performance." },
-    { k: "Website Content", v: "Service, product and landing pages that turn your visitors into customers." },
-    { k: "Social Media", v: "Curated content for Instagram, Facebook and X that sounds like your brand voice, not a template." },
-    { k: "Reddit", v: "Genuine participation in the communities your buyers trust — which shapes what AI tools say about your business." },
-    { k: "Paid Advertising", v: "Campaigns on Google and social platforms, built around your targets and reported honestly." },
+export const homeHowItWorks = {
+  title: "What Do We Do and How Does This All Work?",
+  steps: [
+    { phase: "Weeks 1-2", body: "We analyse your competitors, run buyer-intent prompts across AI models, and check your footprint across LinkedIn, AI answer engines, and Google Search." },
+    { phase: "Week 3", body: "We engage in interviews with you to understand your knowledge, experience and vision. We provide a framework for going forward and a roadmap on how we'll proceed, and then set about building your brand's identity." },
+    { phase: "Week 4+", body: "Every month, we'll provide human-written content spanning all three channels and discovery layers. You can review, approve, and post, costing you no more than 30 minutes." },
+    { phase: "Beyond", body: "We continually provide content, monitor profile views from target accounts, and adjust your strategy based on real-time data, with authority building month by month." },
   ],
+};
+
+export const homeFit = {
+  title: "Is Wrds.Pro for You?",
+  fitHeading: "We're the Right Fit for You If:",
+  fitIntro: "Wrds.Pro is ready to dive in and help with LinkedIn marketing, ghostwriting, AI search, and SEO content for businesses if:",
+  fit: [
+    "You are the founder and are seeking to build brand authority naturally with a consistent partner.",
+    "You have expertise in your field, but don't have the time to publish content yourself consistently.",
+    "You can commit to investing time talking with our creative team about your vision and plans.",
+    "You want to rank and build authority across LinkedIn, SEO, AEO, and GEO layers.",
+  ],
+  notFitHeading: "Reasons to Look Elsewhere",
+  notFitIntro: "At Wrds.Pro, we're nothing if not honest. Common reasons you might want to consider another partner include:",
+  notFit: [
+    "If you seek AI-generated content at scale. This is not a service we provide.",
+    "If you're looking for shortcuts or viral hacks that “promise success”.",
+    "If you want guaranteed followers. We can only guarantee authority.",
+    "If you want instant results. Building authority and trust doesn't happen overnight.",
+  ],
+};
+
+export const homeFaqs = [
+  {
+    q: "What is AEO, and why is it important to my business?",
+    a: "AEO, or answer engine optimisation, is the process of writing text in a way that search engines can strip out content and provide answers in AI overviews. We do this by constructing snippets to be deliberately pulled by AI search engines when we produce content for you.",
+  },
+  {
+    q: "How does AEO differ from GEO?",
+    a: "AEO focuses on answer extraction (from inside articles) for search engines. It pulls data directly from your content, and we produce content specifically with that in mind. GEO is fact-based and picked up by LLMs directly. We also ensure that fact-heavy tables and content are included in articles for this purpose.",
+  },
+  {
+    q: "How does Wrds.Pro measure AI search visibility?",
+    a: "First, we established a baseline by running a set of buyer-intent prompts across four main AI models. We then track how often you're mentioned or absent, repeating this process each month. We report those rates against your three closest competitors.",
+  },
+  {
+    q: "Won't people know I didn't write the content?",
+    a: "No. As we structure all our content in your language patterns, using your expertise, the content will naturally sound like you to readers because, in a sense, it is you. You're giving us the words to use and rearrange.",
+  },
+  {
+    q: "How do I really know your content is 100% human written?",
+    a: "Because we guarantee it contractually. We only utilise writers who are senior editors with backgrounds in your specific domain. Readers have sharp eyes and a keen sense of what is real, and we're aware of that, which is why we avoid AI.",
+  },
+  {
+    q: "How much time am I required to set aside?",
+    a: "We typically look for around two 90-minute sessions to begin with, then roughly 30 minutes a month to approve content and plans at a time that works for you.",
+  },
+  {
+    q: "Can I purchase just one of the services?",
+    a: "Yes, but most of our clients opt for all services. If you already handle LinkedIn yourself and wish to continue doing so, we're happy to talk to you about individual SEO, AEO/GEO packages.",
+  },
+];
+
+export const homeFinalCta = {
+  title: "Build Your Authority and Trust Signals with Wrds.Pro",
+  body: "Schedule a call and let us get to know you. Together, we'll elevate your LinkedIn presence and build your authority and trust signals with SEO, AEO and GEO-optimised content, tailored to get your business where it needs to be.",
 };
 
 export const stats = [
@@ -119,7 +212,7 @@ export const authorityStack = [
   {
     n: "01",
     title: "Signal Audit",
-    body: "We map your current authority, analyze your competitors, and identify white space across LinkedIn, Google and AI systems.",
+    body: "We map your current authority, analyze your competitors, and identify white space across LinkedIn, Google, and AI systems.",
   },
   {
     n: "02",
@@ -185,11 +278,11 @@ export const services = [
 ];
 
 export const process = [
-  { n: "01", phase: "Weeks 1–2", title: "Foundation", body: "Signal audit and competitive intelligence analysis across LinkedIn, Google and AI models." },
+  { n: "01", phase: "Weeks 1–2", title: "Foundation", body: "Signal audit and competitive intelligence analysis across LinkedIn, Google, and AI models." },
   { n: "02", phase: "Week 3", title: "Extraction", body: "IP engine extraction via two deep-dive interviews with the founder, each one lasting 90 minutes." },
   { n: "03", phase: "Week 4", title: "First Output", body: "Your first content suite for the founder authority system delivered, with one revision round." },
   { n: "04", phase: "Months 2–3", title: "Compounding", body: "Weekly content deliveries, performance reviews, and strategy refinement based on the analytics." },
-  { n: "05", phase: "Month 3+", title: "Authority", body: "The compounding phase of the narrative infrastructure process, where results accelerate as we build the asset." },
+  { n: "05", phase: "Month 3+", title: "Authority", body: "The compounding phase of the narrative infrastructure process, where the results accelerate as we build the asset." },
 ];
 
 export const caseStudies = [
@@ -301,8 +394,8 @@ export const idealClient = {
   fit: [
     "Founders/C-suite at funded startups, Seed through Series B",
     "Executives with genuine expertise but inconsistent publishing",
-    "Brands within 12 months of a raise, building pipeline, or competing for talent",
-    "Willing to invest two 90-minute IP sessions upfront, plus monthly 30-minute reviews",
+    "Brands that are within 12 months of a raise, building pipeline, or competing for talent",
+    "Those willing to invest two 90-minute IP sessions upfront, plus monthly 30-minute reviews",
   ],
   notFit: [
     "Looking for AI-generated content at scale",
@@ -397,103 +490,122 @@ export const contact = {
 export const theWork = {
   hero: {
     eyebrow: "The Work",
-    title: "From what only you know to what your market can discover.",
-    body: "Two discovery layers. One technical foundation. One authority system — all built around your thinking. When expertise stays inside your head, it cannot build founder authority, influence a buying decision, or become part of the conversation your market is already having. wrds.pro turns that thinking into narrative infrastructure: a connected system across LinkedIn, Google, AI search and your website. Everything is built through one proprietary framework — the Executive Authority Stack.",
+    title: "From What Only You Know To What Your Market Can Discover",
+    body: "Two discovery layers. One technical foundation. One authority system. All built around your thinking. When expertise stays inside your head, it cannot build founder authority, influence a buying decision, or become part of the conversation your market is already having.\n\nWrds.Pro turns that thinking into narrative infrastructure: a connected system across LinkedIn, Google, AI search, and your website. LinkedIn ghostwriting for founders builds executive authority on platforms where people are already paying attention. SEO and GEO for founders make that authority discoverable when buyers, investors, and talent start researching.\n\nEverything is built through one proprietary framework: the Executive Authority Stack.",
   },
   pillars: [
     {
       n: "01",
       title: "LinkedIn Authority",
       tagline: "Thought leadership built from what you actually know.",
-      body: "LinkedIn ghostwriting for founders should do more than keep a profile active. It should establish a distinct point of view, make your expertise recognizable, and create a system of founder authority content that works before the first conversation. We extract the thinking behind your business, then turn it into executive thought leadership that sounds like you because it comes from you.",
+      body: "LinkedIn ghostwriting for founders should do more than keep a profile active. It should establish a distinct point of view, make your expertise recognizable, and create a system of founder authority content that works before the first conversation.\n\nWe extract the thinking behind your business, then turn it into executive thought leadership that sounds like you because it comes from you.",
       points: [
-        "Long-form LinkedIn articles built around your frameworks, positions and hard-earned insight",
-        "Short-form posts designed for human resonance, meaningful engagement and algorithmic visibility",
+        "Long-form LinkedIn articles built around your frameworks, positions, and hard-earned insight",
+        "Short-form posts designed for human resonance, meaningful engagement, and algorithmic visibility",
         "A consistent editorial voice developed around your founder positioning, not borrowed templates",
-        "Strategic content mapped to investors, customers, partners and senior talent",
+        "Strategic content mapped to investors, customers, partners, and senior talent",
         "Every word written by a senior human writer. No AI-generated copy",
       ],
+      closing: "The objective is not to make you publish more. It is to make your thinking easier to recognize.",
     },
     {
       n: "02",
       title: "SEO, GEO & AEO Visibility",
       tagline: "Be discoverable wherever your ICP is looking.",
-      body: "The way people search has changed. Some customers still start with Google, while your next investor, buyer or hire may ask ChatGPT, Gemini or another AI system first. That is why SEO, GEO and AEO for founders are built together — turning expertise into a discoverable authority asset across search visibility, AI visibility and the original thinking behind both.",
+      body: "The way people search has changed. Some of your customers may still start with Google, while your next investor, buyer, or hire may ask ChatGPT, Gemini, or another AI system first. That is why SEO, GEO & AEO for founders are built together.\n\nSEO, GEO, & AEO work together to turn expertise into a discoverable authority asset, connecting search visibility, AI visibility, and the original thinking behind both.",
       points: [
-        "SEO: topical authority, keyword strategy, backlinks, technical health, semantic structure and E-E-A-T",
-        "GEO: fact density, entity clarity, named frameworks, proprietary insights, citations and structured information",
-        "AEO: answer-focused structure, direct answers, question-led optimization and conversational search intent",
+        "SEO: Topical authority, keyword strategy, backlinks, technical health, semantic structure, and E-E-A-T",
+        "GEO: Fact density, entity clarity, named frameworks, proprietary insights, citations, and structured information",
+        "AEO: Answer-focused content structure, direct answers, question-led optimization, and conversational search intent",
         "Content architecture designed for both search engines and AI answer engines",
         "One underlying body of original thinking supporting Google rankings and AI citations",
       ],
+      closing: "The principle is simple: the content worth ranking is increasingly the content worth citing. Your narrative infrastructure gives both discovery layers something authoritative to work with.",
     },
   ],
   foundation: {
-    eyebrow: "The foundation underneath both layers",
+    eyebrow: "The Foundation Underneath Both Layers",
     title: "Website Development",
     tagline: "The foundation your authority lands on.",
-    body: "A LinkedIn post can create interest. Search can create discovery. An AI citation can create a new point of entry — and every one of those paths eventually leads back to your website. If that foundation is slow, poorly structured or unclear to the visitor, the authority you've built has nowhere to compound. We develop and fix websites as part of the wider Executive Authority Stack.",
+    body: "A LinkedIn post can create interest. Search can create discovery. An AI citation can create a new point of entry. While every one of those paths eventually leads back to your website.\n\nIf that digital foundation is slow, poorly structured, difficult to crawl, or unclear to the visitor, the authority you've built has nowhere to compound.\n\nWe develop and fix websites as part of the wider Executive Authority Stack, creating a technical foundation that supports SEO and GEO for founders from the start.",
     points: [
       "Fast-loading pages with clean technical architecture",
-      "Clear information hierarchy for users, crawlers and AI systems",
+      "Clear information hierarchy for users, crawlers, and AI systems",
       "Search-ready content structures and internal linking",
       "No bloated templates or unnecessary plugin complexity",
       "A conversion-focused digital foundation for your founder authority content",
     ],
+    closing: "Your website is not a separate project. It is the infrastructure underneath the entire system.",
   },
   stack: {
-    eyebrow: "How it's built",
+    eyebrow: "How It's Built",
     title: "The Executive Authority Stack",
     tagline: "Three pillars. One compounding asset.",
+    intro: "The Executive Authority Stack is a strategic system for building founder authority. It is Wrds.Pro's narrative infrastructure, built around the intellectual property that already exists in your experience and expertise. The system has three connected stages.",
     stages: [
       {
         n: "01",
         title: "Signal Audit",
-        body: "Before we create content, we analyze where you actually stand — mapping your authority footprint across Google, LinkedIn and AI-generated answers. After studying what your ICP searches for, which competitors own those conversations and where the intellectual white space exists, we turn those findings into a clear authority roadmap.",
-        outputs: "Competitive landscape map, authority gap analysis, ICP search behaviour, content white-space identification, positioning architecture.",
+        body: "Before we create content, we analyze where you actually stand. We map your authority footprint across Google, LinkedIn, and AI-generated answers. After studying what your ICP searches for, which competitors own those conversations, and where the intellectual white space exists, we then turn those findings into a clear authority roadmap, defining where your expertise can earn attention, credibility, and distinction.",
+        outputs: "Competitive landscape map, authority gap analysis, ICP search behaviour, content white-space identification, and positioning architecture.",
       },
       {
         n: "02",
         title: "IP Engine",
-        body: "Your strongest ideas rarely arrive as polished content. They live in the way you explain the market, challenge conventional thinking and make decisions. We extract that intellectual property and turn it into named frameworks, signature concepts, proprietary vocabulary and a repeatable point of view.",
-        outputs: "Founder IP architecture, named frameworks, signature content pillars, proprietary vocabulary, voice guide.",
+        body: "Your strongest ideas rarely arrive as polished content. They live in the way you explain the market, challenge conventional thinking, solve customer problems, and make decisions. We extract that intellectual property and turn it into named frameworks, signature concepts, proprietary vocabulary, and a repeatable point of view. That becomes the foundation for LinkedIn ghostwriting for founders, founder authority content, SEO, GEO, and AEO.",
+        outputs: "Founder IP architecture, named frameworks, signature content pillars, proprietary vocabulary, and voice guide.",
       },
       {
         n: "03",
         title: "Intellectual Asset Class",
-        body: "Then we put the system to work — your ideas deployed across LinkedIn, search and AI discovery without you becoming a full-time writer. Each month we build a complete content suite from the IP Engine, optimized for both human attention and algorithmic discovery. Your time after onboarding: roughly 30 minutes a month.",
-        outputs: "Monthly content suite across LinkedIn, search and AI discovery, optimized for human attention and algorithmic visibility.",
+        body: "Then we put the system to work where your ideas are deployed across LinkedIn, search, and AI discovery without requiring you to become a full-time writer. Each month, we build a complete content suite from the IP Engine, optimized for both human attention and algorithmic discovery. Your time after onboarding: approximately 30 minutes a month. That is how narrative infrastructure becomes a compounding business asset rather than another recurring task.",
+        outputs: "Monthly content suite across LinkedIn, search, and AI discovery, optimized for human attention and algorithmic visibility.",
       },
     ],
   },
   investing: {
-    eyebrow: "What this is not",
-    title: "What you are actually investing in.",
+    eyebrow: "What This Is Not",
+    title: "What You Are Actually Investing In",
     pairs: [
       {
-        not: "AI-generated content dressed as your thinking.",
-        notBody: "AI can produce words quickly. It cannot manufacture the experience, conviction, proprietary frameworks or lived perspective that make founder authority content credible.",
-        instead: "IP extracted from your actual thinking, human-written, guaranteed.",
-        insteadBody: "We interview you, analyze your market, study your competitors and structure your ideas with a senior human writer. The result sounds like you because the underlying thinking is yours.",
+        not: "AI-Generated Content Dressed As Your Thinking",
+        notBody: "AI can produce words quickly. It cannot manufacture the experience, conviction, proprietary frameworks, or lived perspective that make founder authority content credible.",
+        instead: "IP Extracted From Your Actual Thinking, Human-Written, Guaranteed.",
+        insteadBody: "We interview you, analyze your market, study your competitors, and structure your ideas with the help of a senior human writer. The result is content that sounds like you because the underlying thinking is yours.",
       },
       {
-        not: "A ghostwriting mill with strategic language.",
+        not: "A Ghostwriting Mill With Strategic Language",
         notBody: "Templates and posting schedules do not create authority. Neither does producing hundreds of generic posts.",
-        instead: "Research-driven strategy consulting.",
-        insteadBody: "We build your positioning architecture before execution, connecting LinkedIn ghostwriting with SEO, GEO, competitive intelligence and your wider business objectives.",
+        instead: "Research-Driven Strategy Consulting.",
+        insteadBody: "We build your positioning architecture before execution, connecting LinkedIn ghostwriting for founders with SEO, GEO, competitive intelligence, and your wider business objectives.",
       },
       {
-        not: "Vanity metrics.",
+        not: "Vanity Metrics",
         notBody: "Impressions and follower counts can look impressive without changing a single commercial conversation.",
-        instead: "Authority tied to business outcomes.",
-        insteadBody: "Whether the objective is fundraising, enterprise pipeline, senior hiring or category ownership, your Executive Authority Stack is built around the outcome that matters.",
+        instead: "Authority Tied To Business Outcomes",
+        insteadBody: "Whether the objective is fundraising, building enterprise pipeline, senior hiring, or category ownership, your Executive Authority Stack is built around the outcome that matters.",
       },
     ],
   },
+  timeline: {
+    eyebrow: "From Zero To Authority",
+    title: "What Happens After You Say Yes",
+    phases: [
+      { phase: "Week 1–2", title: "Foundations", body: "We conduct the Signal Audit and competitive intelligence across Google, LinkedIn, and AI citation environments.", deliverable: "Competitive landscape brief + positioning architecture" },
+      { phase: "Week 3", title: "Extraction", body: "Two deep-dive IP extraction sessions surface the frameworks, positions, stories, and expertise that have never been formally articulated.", deliverable: "IP architecture + voice and tone guide" },
+      { phase: "Week 4", title: "First Output", body: "Your first long-form article and first month of short-form content are delivered, with SEO and GEO for founders built into the content from the start.", deliverable: "Month 1 content suite" },
+      { phase: "Months 2–3", title: "Compounding", body: "The system runs weekly. We monitor relevant profile views, connection requests, inbound signals, search visibility, and AI discovery, then refine the strategy using real data.", deliverable: "Weekly content + monthly strategy review" },
+      { phase: "Month 3+", title: "Authority", body: "The infrastructure continues to compound. Your ideas become easier to discover, recognize, reference, and trust across every layer of discovery.", deliverable: "Ongoing Wrds.Pro narrative infrastructure" },
+    ],
+  },
+  stats: {
+    title: "The Numbers Behind The Shift",
+    closing: "The implication for founders is straightforward: authority increasingly needs to exist before active research begins. That is what SEO, GEO and AEO for founders, founder authority content, and LinkedIn ghostwriting for founders are designed to build together.",
+  },
   freeArticle: {
-    eyebrow: "See it before you commit",
-    title: "Get one article free.",
-    body: "You don't need to take our word for it. Give us one piece of your intellectual property. We'll turn it into a LinkedIn article through the same research, strategic thinking and human writing that powers the Executive Authority Stack. No templates. No AI-generated filler. No obligation.",
+    eyebrow: "See It Before You Commit",
+    title: "Get One Article Free",
+    body: "You do not need to take our word for it.\n\nGive us one piece of your intellectual property. We will turn it into a LinkedIn article through the same research, strategic thinking, and human writing that powers the Executive Authority Stack.\n\nNo templates. No AI-generated filler. No obligation.\n\nYou can see exactly what Wrds.Pro narrative infrastructure looks like when your own thinking becomes the raw material.",
     cta: "Get One Article Free",
   },
 };
@@ -505,8 +617,10 @@ export const theWork = {
 export const theSystem = {
   hero: {
     eyebrow: "The System",
-    title: "The Executive Authority Stack.",
-    body: "wrds.pro's Executive Authority Stack comprises three layers, assembled in a standard sequence, designed to convert a founder's thinking into a compounding, discoverable asset — the narrative infrastructure.",
+    title: "Wrds.Pro's Executive Authority Stack",
+    body: "Wrds.Pro's executive authority stack comprises three layers that are assembled in a standard sequence. These are meant to convert a founder's thinking into a compounding, discoverable asset: the narrative infrastructure.",
   },
-  closing: "Your thinking is your biggest asset, and we can build a narrative infrastructure from that. Unlock your authority with wrds.pro.",
+  stackNote: "All three layers, when combined, facilitate the narrative infrastructure process.",
+  timelineTitle: "Week-by-Week Developments: How the Founder Authority System Works",
+  closing: "Your thinking is your biggest asset, and we can build a narrative infrastructure from that. Unlock your authority with Wrds.Pro.",
 };

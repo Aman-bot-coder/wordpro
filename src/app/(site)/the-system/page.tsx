@@ -37,9 +37,8 @@ export default async function TheSystemPage() {
               </div>
             </Reveal>
           ))}
-          <Reveal className="pt-10 text-center">
-            <p className="eyebrow text-navy/50">↓ locks together into ↓</p>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-navy">NARRATIVE INFRASTRUCTURE</p>
+          <Reveal className="pt-8 text-center">
+            <p className="mx-auto max-w-2xl text-lg font-medium text-navy">{theSystem.stackNote}</p>
           </Reveal>
         </div>
       </section>
@@ -48,8 +47,8 @@ export default async function TheSystemPage() {
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <div className="eyebrow text-[var(--color-yellow)]">The Timeline</div>
-            <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
-              How the stack gets built, week by week.
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
+              {theSystem.timelineTitle}
             </h2>
           </Reveal>
           <div className="relative mt-16 grid gap-8 md:grid-cols-5">
