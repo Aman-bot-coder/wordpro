@@ -21,11 +21,61 @@ export const nav = [
 ];
 
 export const hero = {
-  eyebrow: "Narrative Infrastructure for Founders",
-  headline: "Your investors Google you before every meeting.",
-  sub: "wrds.pro builds narrative infrastructure that makes founders discoverable, credible and memorable across LinkedIn, Google and AI — human-written, always.",
+  eyebrow: "LinkedIn · SEO · AEO · GEO · AI Search",
+  headline: "Let wrds.pro build your brand's authority and visibility.",
+  sub: "wrds.pro builds authority across LinkedIn, Google Search and AI models — guaranteed human-written AI-search and SEO content that grows your presence on the channels that matter most. You provide the idea; we provide the tools.",
   ctaPrimary: "Book Your Authority Audit",
   ctaSecondary: "Explore the System",
+};
+
+export const homeDiscovery = {
+  title: "Three discovery layers, one service.",
+  body: "For your brand to be identifiable, distinguished and authoritative, it must be the go-to option in three places.",
+  layers: [
+    {
+      k: "LinkedIn",
+      v: "Buyers decide if you're the authority brand they're looking for based on the strength of your posts and articles.",
+    },
+    {
+      k: "Google",
+      v: "You show up as the top result when readers search for solutions — with the answers found in your pages and content.",
+    },
+    {
+      k: "AI",
+      v: "You need to be one of the top companies referenced by AI as a trusted source.",
+    },
+  ],
+};
+
+export const homeSearchFocus = {
+  title: "SEO, AEO, GEO: where should the focus be?",
+  body: "All three are included in a wrds.pro plan. Nobody relies solely on Google anymore — searches are split across multiple fronts, each with its own rewards for your brand.",
+  items: [
+    {
+      k: "SEO — Search Engine Optimisation",
+      v: "We structure your website and content to rank in traditional search engines. GEO and AEO are built on top of SEO, which remains the largest channel.",
+    },
+    {
+      k: "AEO — Answer Engine Optimisation",
+      v: "We produce content AI answer engines — including Google AI Overview — pick up as direct answers, with snippets built to be chosen ahead of a competitor's.",
+    },
+    {
+      k: "GEO — Generative Engine Optimisation",
+      v: "We structure fact-based content so LLMs cite your brand as a source inside their AI-generated outputs.",
+    },
+  ],
+};
+
+export const homeServices = {
+  title: "All services in one place.",
+  body: "Authority building on LinkedIn only works well if the rest of your digital presence is strong enough to back it. Our team also handles:",
+  items: [
+    { k: "Website Development", v: "Sites developed for quick load times, clear readability and excellent search performance." },
+    { k: "Website Content", v: "Service, product and landing pages that turn your visitors into customers." },
+    { k: "Social Media", v: "Curated content for Instagram, Facebook and X that sounds like your brand voice, not a template." },
+    { k: "Reddit", v: "Genuine participation in the communities your buyers trust — which shapes what AI tools say about your business." },
+    { k: "Paid Advertising", v: "Campaigns on Google and social platforms, built around your targets and reported honestly." },
+  ],
 };
 
 export const stats = [
