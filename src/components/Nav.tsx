@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { nav, site } from "@/lib/content";
 
 // Routes whose hero sits on a dark background — the nav inverts until scrolled.
-const DARK_HERO_ROUTES = ["/"];
+const DARK_HERO_ROUTES: string[] = [];
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);

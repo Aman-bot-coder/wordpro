@@ -50,21 +50,20 @@ export default async function Home() {
     <>
       <JsonLd data={await pageGraph("/")} />
       {/* 01 HERO */}
-      <section className="grid-texture-dark noise relative overflow-hidden bg-navy px-6 pb-24 pt-40 md:pt-48">
-        <div className="pointer-events-none absolute -top-40 right-0 h-[600px] w-[600px] rounded-full bg-royal/30 blur-[140px]" />
-        <div className="pointer-events-none absolute -bottom-40 left-0 h-[400px] w-[400px] rounded-full bg-[var(--color-yellow)]/5 blur-[140px]" />
+      <section className="grid-texture relative overflow-hidden px-6 pb-24 pt-40 md:pt-48">
+        <div className="pointer-events-none absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-royal/10 blur-[140px]" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
           <div>
-            <div className="eyebrow text-[13px] font-semibold tracking-[0.2em] text-[var(--color-yellow)] md:text-sm">
+            <div className="eyebrow text-[13px] font-semibold tracking-[0.2em] text-royal md:text-sm">
               {hero.eyebrow}
             </div>
-            <h1 className="text-balance mt-6 text-[13vw] font-semibold leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-[4.6vw]">
+            <h1 className="text-balance mt-6 text-[13vw] font-semibold leading-[0.98] tracking-tight text-navy sm:text-6xl lg:text-[4.6vw]">
               {hero.headline}
             </h1>
-            <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/70">{hero.sub}</p>
+            <p className="mt-8 max-w-lg text-lg leading-relaxed text-gray-dark">{hero.sub}</p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button href="/contact">{hero.ctaPrimary}</Button>
-              <Button href="/the-system" variant="outlineLight">
+              <Button href="/the-system" variant="secondary">
                 {hero.ctaSecondary}
               </Button>
             </div>
