@@ -5,7 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { GlassCard } from "@/components/GlassCard";
 import { CTASection } from "@/components/CTASection";
-import { authorityStack, process, capacity, idealClient } from "@/lib/content";
+import { authorityStack, process, capacity, idealClient, theSystem } from "@/lib/content";
 
 export const revalidate = 300;
 
@@ -16,9 +16,9 @@ export default async function TheSystemPage() {
     <>
       <JsonLd data={await pageGraph("/the-system")} />
       <PageHero
-        eyebrow="The System"
-        title="The Executive Authority Stack."
-        body="Three layers, assembled in order, that turn founder thinking into a compounding, discoverable asset — narrative infrastructure."
+        eyebrow={theSystem.hero.eyebrow}
+        title={theSystem.hero.title}
+        body={theSystem.hero.body}
       />
 
       <section className="px-6 pb-32">
@@ -100,6 +100,11 @@ export default async function TheSystemPage() {
         <Reveal className="mx-auto mt-10 max-w-6xl">
           <p className="eyebrow text-navy/50">Capacity</p>
           <p className="mt-2 max-w-2xl text-lg text-gray-dark">{capacity}</p>
+        </Reveal>
+        <Reveal className="mx-auto mt-16 max-w-3xl text-center">
+          <p className="text-balance text-2xl font-semibold italic leading-snug text-navy md:text-3xl">
+            {theSystem.closing}
+          </p>
         </Reveal>
       </section>
 
