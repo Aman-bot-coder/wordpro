@@ -13,6 +13,9 @@ import {
   caseStudies,
   pricing,
   authorityStack,
+  process,
+  idealClient,
+  capacity,
   theSystem,
   homeSubServices,
   homeServices,
@@ -78,6 +81,67 @@ export default async function Home() {
             <p className="text-lg font-medium text-navy">{theSystem.stackNote}</p>
           </Reveal>
         </div>
+      </section>
+
+      {/* THE TIMELINE (doc: Week-by-Week Developments) */}
+      <section className="grid-texture-dark border-y border-white/10 bg-navy px-6 py-28 text-white">
+        <div className="mx-auto max-w-6xl">
+          <Reveal>
+            <div className="eyebrow text-[var(--color-yellow)]">The Timeline</div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">{theSystem.timelineTitle}</h2>
+          </Reveal>
+          <div className="relative mt-16 grid gap-8 md:grid-cols-5">
+            <div className="absolute left-0 right-0 top-[52px] hidden h-px bg-gradient-to-r from-royal via-[var(--color-yellow)] to-royal md:block" />
+            {process.map((step, i) => (
+              <Reveal key={step.n} delay={i * 0.08} className="relative">
+                <div className="eyebrow text-white/50">{step.phase}</div>
+                <div className="relative z-10 mt-3 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-yellow)] font-mono text-sm font-bold text-navy">
+                  {step.n}
+                </div>
+                <h3 className="mt-4 text-lg font-semibold">{step.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/60">{step.body}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BUILT FOR / NOT A FIT / CAPACITY (doc3) */}
+      <section className="px-6 py-28">
+        <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
+          <Reveal>
+            <GlassCard className="h-full p-10">
+              <div className="eyebrow text-royal">Built For</div>
+              <ul className="mt-4 space-y-3 text-gray-dark">
+                {idealClient.fit.map((f) => (
+                  <li key={f} className="flex gap-2"><span className="text-royal">✓</span>{f}</li>
+                ))}
+              </ul>
+            </GlassCard>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <GlassCard className="h-full p-10">
+              <div className="eyebrow text-gray-dark">Not a Fit if You&apos;re</div>
+              <ul className="mt-4 space-y-3 text-gray-dark">
+                {idealClient.notFit.map((f) => (
+                  <li key={f} className="flex gap-2"><span className="text-navy/30">✕</span>{f}</li>
+                ))}
+              </ul>
+            </GlassCard>
+          </Reveal>
+        </div>
+        <Reveal className="mx-auto mt-10 max-w-6xl">
+          <p className="eyebrow text-navy/50">Capacity</p>
+          <p className="mt-2 max-w-2xl text-lg text-gray-dark">{capacity}</p>
+        </Reveal>
+        <Reveal className="mx-auto mt-16 max-w-3xl text-center">
+          <p className="text-balance text-2xl font-semibold italic leading-snug text-navy md:text-3xl">
+            {theSystem.closing}
+          </p>
+          <div className="mt-8 flex justify-center">
+            <Button href="/contact">Book Your Authority Audit</Button>
+          </div>
+        </Reveal>
       </section>
 
       {/* SERVICE SUB-SECTIONS */}
