@@ -217,7 +217,7 @@ export const authorityStack = [
   {
     n: "02",
     title: "IP Engine",
-    body: "Our team extracts your actual thinking into named frameworks, points of view and proprietary language to build a founder authority system.",
+    body: "Our team extracts your actual thinking into named frameworks, points of view, and proprietary language to build a founder authority system.",
   },
   {
     n: "03",
