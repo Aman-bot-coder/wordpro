@@ -4,7 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { GlassCard } from "@/components/GlassCard";
-import { CTASection } from "@/components/CTASection";
+import { Button } from "@/components/Button";
 import { authorityStack, process, capacity, idealClient, theSystem } from "@/lib/content";
 
 export const revalidate = 300;
@@ -104,10 +104,11 @@ export default async function TheSystemPage() {
           <p className="text-balance text-2xl font-semibold italic leading-snug text-navy md:text-3xl">
             {theSystem.closing}
           </p>
+          <div className="mt-8 flex justify-center">
+            <Button href="/contact">Book Your Authority Audit</Button>
+          </div>
         </Reveal>
       </section>
-
-      <CTASection />
     </>
   );
 }
