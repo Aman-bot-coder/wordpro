@@ -78,27 +78,16 @@ export default async function Home() {
           <Reveal className="mt-10">
             <p className="text-lg font-medium text-navy">{homeDiscovery.closing}</p>
           </Reveal>
-
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            {homeSubServices.map((s, i) => (
-              <Reveal key={s.k} delay={i * 0.05}>
-                <div className="glass h-full rounded-2xl border-l-4 border-l-[var(--color-yellow)] p-8">
-                  <h3 className="text-xl font-semibold text-navy">{s.k}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-gray-dark">{s.v}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* EXECUTIVE AUTHORITY STACK */}
-      <section className="px-6 py-28">
+      <section className="border-t border-navy/5 px-6 py-28">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionHeader
-              eyebrow="The Executive Authority Stack"
-              title="Three layers. One compounding asset."
+              eyebrow="The System"
+              title={theSystem.hero.title}
               body={theSystem.hero.body}
             />
           </Reveal>
@@ -121,6 +110,22 @@ export default async function Home() {
           <Reveal className="mt-10 text-center">
             <p className="mx-auto max-w-2xl text-lg font-medium text-navy">{theSystem.stackNote}</p>
           </Reveal>
+        </div>
+      </section>
+
+      {/* SERVICE SUB-SECTIONS */}
+      <section className="border-t border-navy/5 px-6 py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-6 md:grid-cols-2">
+            {homeSubServices.map((s, i) => (
+              <Reveal key={s.k} delay={i * 0.05}>
+                <div className="glass h-full rounded-2xl border-l-4 border-l-[var(--color-yellow)] p-8">
+                  <h3 className="text-xl font-semibold text-navy">{s.k}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-dark">{s.v}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
