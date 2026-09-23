@@ -12,6 +12,8 @@ import {
   stats,
   caseStudies,
   pricing,
+  authorityStack,
+  theSystem,
   homeDiscovery,
   homeSubServices,
   homeServices,
@@ -87,6 +89,38 @@ export default async function Home() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* EXECUTIVE AUTHORITY STACK */}
+      <section className="px-6 py-28">
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <SectionHeader
+              eyebrow="The Executive Authority Stack"
+              title="Three layers. One compounding asset."
+              body={theSystem.hero.body}
+            />
+          </Reveal>
+          <div className="relative mt-14 space-y-4">
+            {authorityStack.map((layer, i) => (
+              <Reveal key={layer.n} delay={i * 0.08}>
+                <div
+                  className="glass flex flex-col gap-4 rounded-2xl border-l-4 border-l-[var(--color-yellow)] p-8 transition-transform duration-300 hover:translate-x-2 md:flex-row md:items-center md:gap-10"
+                  style={{ marginLeft: `${i * 24}px` }}
+                >
+                  <div className="font-mono text-2xl text-royal md:w-16">{layer.n}</div>
+                  <div className="md:w-64">
+                    <h3 className="text-2xl font-semibold text-navy">{layer.title}</h3>
+                  </div>
+                  <p className="text-gray-dark md:flex-1">{layer.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal className="mt-10 text-center">
+            <p className="mx-auto max-w-2xl text-lg font-medium text-navy">{theSystem.stackNote}</p>
+          </Reveal>
         </div>
       </section>
 
