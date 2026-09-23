@@ -14,7 +14,6 @@ import {
   pricing,
   authorityStack,
   theSystem,
-  homeDiscovery,
   homeSubServices,
   homeServices,
   homeWhy,
@@ -58,57 +57,25 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* THREE DISCOVERY LAYERS */}
+      {/* EXECUTIVE AUTHORITY STACK */}
       <section className="border-t border-navy/5 px-6 py-28">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <SectionHeader eyebrow="Three Discovery Layers, One Service" title={homeDiscovery.title} body={homeDiscovery.body} />
+            <SectionHeader eyebrow="The System" title={theSystem.hero.title} body={theSystem.hero.body} />
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {homeDiscovery.layers.map((layer, i) => (
-              <Reveal key={layer.k} delay={i * 0.08}>
+            {authorityStack.map((layer, i) => (
+              <Reveal key={layer.n} delay={i * 0.08}>
                 <GlassCard className="h-full p-8 transition-transform duration-300 hover:-translate-y-1.5">
-                  <div className="font-mono text-sm text-royal">0{i + 1}</div>
-                  <h3 className="mt-3 text-2xl font-semibold text-navy">{layer.k}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-gray-dark">{layer.v}</p>
+                  <div className="font-mono text-sm text-royal">{layer.n}</div>
+                  <h3 className="mt-3 text-2xl font-semibold text-navy">{layer.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-dark">{layer.body}</p>
                 </GlassCard>
               </Reveal>
             ))}
           </div>
           <Reveal className="mt-10">
-            <p className="text-lg font-medium text-navy">{homeDiscovery.closing}</p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* EXECUTIVE AUTHORITY STACK */}
-      <section className="border-t border-navy/5 px-6 py-28">
-        <div className="mx-auto max-w-7xl">
-          <Reveal>
-            <SectionHeader
-              eyebrow="The System"
-              title={theSystem.hero.title}
-              body={theSystem.hero.body}
-            />
-          </Reveal>
-          <div className="relative mt-14 space-y-4">
-            {authorityStack.map((layer, i) => (
-              <Reveal key={layer.n} delay={i * 0.08}>
-                <div
-                  className="glass flex flex-col gap-4 rounded-2xl border-l-4 border-l-[var(--color-yellow)] p-8 transition-transform duration-300 hover:translate-x-2 md:flex-row md:items-center md:gap-10"
-                  style={{ marginLeft: `${i * 24}px` }}
-                >
-                  <div className="font-mono text-2xl text-royal md:w-16">{layer.n}</div>
-                  <div className="md:w-64">
-                    <h3 className="text-2xl font-semibold text-navy">{layer.title}</h3>
-                  </div>
-                  <p className="text-gray-dark md:flex-1">{layer.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal className="mt-10 text-center">
-            <p className="mx-auto max-w-2xl text-lg font-medium text-navy">{theSystem.stackNote}</p>
+            <p className="text-lg font-medium text-navy">{theSystem.stackNote}</p>
           </Reveal>
         </div>
       </section>
