@@ -11,7 +11,7 @@ import {
   hero,
   stats,
   pricing,
-  authorityStack,
+  homeDiscovery,
   process,
   idealClient,
   capacity,
@@ -61,25 +61,25 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* EXECUTIVE AUTHORITY STACK */}
+      {/* THREE DISCOVERY LAYERS, ONE SERVICE */}
       <section className="border-t border-navy/5 px-6 py-28">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <SectionHeader eyebrow="The System" title={theSystem.hero.title} body={theSystem.hero.body} />
+            <SectionHeader eyebrow="Three Layers, One Service" title={homeDiscovery.title} body={homeDiscovery.body} />
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {authorityStack.map((layer, i) => (
-              <Reveal key={layer.n} delay={i * 0.08}>
+            {homeDiscovery.layers.map((layer, i) => (
+              <Reveal key={layer.k} delay={i * 0.08}>
                 <GlassCard className="h-full p-8 transition-transform duration-300 hover:-translate-y-1.5">
-                  <div className="font-mono text-sm text-royal">{layer.n}</div>
-                  <h3 className="mt-3 text-2xl font-semibold text-navy">{layer.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-gray-dark">{layer.body}</p>
+                  <div className="font-mono text-sm text-royal">0{i + 1}</div>
+                  <h3 className="mt-3 text-2xl font-semibold text-navy">{layer.k}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-dark">{layer.v}</p>
                 </GlassCard>
               </Reveal>
             ))}
           </div>
           <Reveal className="mt-10">
-            <p className="text-lg font-medium text-navy">{theSystem.stackNote}</p>
+            <p className="text-lg font-medium text-navy">{homeDiscovery.closing}</p>
           </Reveal>
         </div>
       </section>
