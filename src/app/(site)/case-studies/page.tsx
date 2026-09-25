@@ -7,13 +7,14 @@ import { Reveal } from "@/components/Reveal";
 import { GlassCard } from "@/components/GlassCard";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { CTASection } from "@/components/CTASection";
-import { caseStudies } from "@/lib/caseStudies";
+import { listCaseStudies } from "@/lib/content-store";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 export const generateMetadata = () => buildMetadata("/case-studies");
 
 export default async function CaseStudiesPage() {
+  const caseStudies = await listCaseStudies();
   return (
     <>
       <JsonLd data={await pageGraph("/case-studies")} />

@@ -25,7 +25,7 @@ import {
   homeFaqs,
   homeFinalCta,
 } from "@/lib/content";
-import { caseStudies } from "@/lib/caseStudies";
+import { listCaseStudies } from "@/lib/content-store";
 import Link from "next/link";
 
 export const revalidate = 300;
@@ -33,6 +33,7 @@ export const revalidate = 300;
 export const generateMetadata = () => buildMetadata("/");
 
 export default async function Home() {
+  const caseStudies = await listCaseStudies();
   return (
     <>
       <JsonLd data={await pageGraph("/")} />

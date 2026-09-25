@@ -4,11 +4,9 @@ import { notFound } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
 import { Prose } from "@/components/Prose";
 import { CTASection } from "@/components/CTASection";
-import { insights } from "@/lib/insights";
+import { getBlog } from "@/lib/content-store";
 
-export function generateStaticParams() {
-  return insights.map((a) => ({ slug: a.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
@@ -16,7 +14,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const article = insights.find((a) => a.slug === slug);
+  const article = await getBlog(slug);
   if (!article) return {};
   return {
     title: article.metaTitle,
@@ -30,7 +28,7 @@ export default async function InsightDetail({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = insights.find((a) => a.slug === slug);
+  const article = await getBlog(slug);
   if (!article) notFound();
 
   return (
@@ -49,6 +47,15 @@ export default async function InsightDetail({
           </Reveal>
         </div>
       </section>
+
+      {article.coverImage && (
+        <section className="px-6 pt-4">
+          <div className="mx-auto max-w-4xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={article.coverImage} alt={article.title} className="w-full rounded-2xl border border-navy/10 object-cover" />
+          </div>
+        </section>
+      )}
 
       <section className="px-6 py-16">
         <div className="mx-auto max-w-3xl">

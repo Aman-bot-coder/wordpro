@@ -12,6 +12,8 @@ export const dynamic = "force-dynamic";
 
 const tabs = [
   { href: "/admin", label: "Pages" },
+  { href: "/admin/blog", label: "Blog" },
+  { href: "/admin/case-studies", label: "Case Studies" },
   { href: "/admin/redirects", label: "Redirects" },
   { href: "/admin/settings", label: "Settings" },
 ];

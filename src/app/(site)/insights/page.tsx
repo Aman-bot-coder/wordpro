@@ -6,14 +6,24 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { GlassCard } from "@/components/GlassCard";
 import { CTASection } from "@/components/CTASection";
-import { insights } from "@/lib/insights";
+import { listBlogs } from "@/lib/content-store";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 export const generateMetadata = () => buildMetadata("/insights");
 
 export default async function InsightsPage() {
-  const [featured, ...rest] = insights;
+  const [featured, ...rest] = await listBlogs();
+
+  if (!featured) {
+    return (
+      <>
+        <JsonLd data={await pageGraph("/insights")} />
+        <PageHero eyebrow="Insights" title="Thinking on narrative infrastructure." body="New articles are on the way." />
+        <CTASection />
+      </>
+    );
+  }
 
   return (
     <>

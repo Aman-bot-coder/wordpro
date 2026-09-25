@@ -4,11 +4,9 @@ import { Reveal } from "@/components/Reveal";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { Prose } from "@/components/Prose";
 import { CTASection } from "@/components/CTASection";
-import { caseStudies } from "@/lib/caseStudies";
+import { getCaseStudy } from "@/lib/content-store";
 
-export function generateStaticParams() {
-  return caseStudies.map((cs) => ({ slug: cs.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
@@ -16,7 +14,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const cs = caseStudies.find((c) => c.slug === slug);
+  const cs = await getCaseStudy(slug);
   if (!cs) return {};
   return {
     title: `${cs.client} — Case Study`,
@@ -30,7 +28,7 @@ export default async function CaseStudyDetail({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const cs = caseStudies.find((c) => c.slug === slug);
+  const cs = await getCaseStudy(slug);
   if (!cs) notFound();
 
   return (
@@ -62,6 +60,15 @@ export default async function CaseStudyDetail({
           ))}
         </div>
       </section>
+
+      {cs.coverImage && (
+        <section className="px-6 pt-12">
+          <div className="mx-auto max-w-4xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={cs.coverImage} alt={cs.title} className="w-full rounded-2xl border border-navy/10 object-cover" />
+          </div>
+        </section>
+      )}
 
       <section className="px-6 py-20">
         <div className="mx-auto max-w-3xl">
