@@ -7,7 +7,7 @@ import { Reveal } from "@/components/Reveal";
 import { GlassCard } from "@/components/GlassCard";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { CTASection } from "@/components/CTASection";
-import { caseStudies } from "@/lib/content";
+import { caseStudies } from "@/lib/caseStudies";
 
 export const revalidate = 300;
 
@@ -19,8 +19,8 @@ export default async function CaseStudiesPage() {
       <JsonLd data={await pageGraph("/case-studies")} />
       <PageHero
         eyebrow="Case Studies"
-        title="Ninety days. Real outcomes."
-        body="Three anonymized engagements. Every metric below is as reported — nothing here is projected or invented."
+        title="Real outcomes."
+        body="Real engagements across digital marketing, trade finance and real estate. Every metric below is as reported — nothing here is projected or invented."
       />
 
       <section className="px-6 pb-32">

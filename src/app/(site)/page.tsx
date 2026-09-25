@@ -10,7 +10,6 @@ import { AnimatedCounter } from "@/components/AnimatedCounter";
 import {
   hero,
   stats,
-  caseStudies,
   pricing,
   authorityStack,
   process,
@@ -26,6 +25,7 @@ import {
   homeFaqs,
   homeFinalCta,
 } from "@/lib/content";
+import { caseStudies } from "@/lib/caseStudies";
 import Link from "next/link";
 
 export const revalidate = 300;

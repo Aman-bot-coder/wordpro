@@ -285,50 +285,6 @@ export const process = [
   { n: "05", phase: "Month 3+", title: "Authority", body: "The compounding phase of the narrative infrastructure process, where the results accelerate as we build the asset." },
 ];
 
-export const caseStudies = [
-  {
-    slug: "series-a-industrial-iot-canada",
-    client: "Series A Founder",
-    industry: "Industrial IoT",
-    geo: "Canada",
-    challenge: "A technically strong founder with no digital footprint, invisible to investors doing pre-meeting diligence.",
-    outcome: "Unsolicited investor introductions began arriving.",
-    metrics: [
-      { value: "1,008,221", label: "impressions" },
-      { value: "+470.6%", label: "vs. prior quarter" },
-      { value: "77,393", label: "single-post impressions (top 5 posts)" },
-      { value: "29%", label: "senior-level followers" },
-    ],
-  },
-  {
-    slug: "executive-team-family-office-usa",
-    client: "Executive Team",
-    industry: "Family Office",
-    geo: "USA · Seed–Series A",
-    challenge: "A multi-founder leadership team with strong thinking but no consistent narrative across channels.",
-    outcome: "Three family office introductions arrived from previously unknown readers.",
-    metrics: [
-      { value: "8,546", label: "total followers (+35% in 30 days)" },
-      { value: "+1,248", label: "followers in 90 days" },
-      { value: "441K", label: "weekly impressions (+38% over 90 days)" },
-      { value: "19%", label: "enterprise-tier followers" },
-    ],
-  },
-  {
-    slug: "vp-product-full-stack-ai",
-    client: "VP of Product",
-    industry: "Full-Stack AI",
-    geo: "USA + India",
-    challenge: "A senior operator whose expertise wasn't visible to the market he needed to reach for hiring and enterprise sales.",
-    outcome: "Two senior PMs applied inbound; an enterprise prospect shortened procurement by months.",
-    metrics: [
-      { value: "87,477", label: "peak weekly impressions" },
-      { value: "70,186", label: "peak weekly unique reach" },
-      { value: "1,174", label: "profile viewers (USA/India split)" },
-    ],
-  },
-];
-
 export const pricing = [
   {
     id: "foundation",
@@ -457,6 +413,102 @@ export const faqs = [
     a: "Foundation covers early-stage founders with a lighter cadence. Authority adds long-form articles, case studies and deeper strategy. Partner is a fully custom, unlimited engagement for funded companies.",
   },
 ];
+
+export const aboutDoc = {
+  title: "About Wrds.Pro",
+  subtitle: "Content That Gets Found, Is Read, and Drives Action",
+  body: `## Who is Wrds.Pro
+
+Wrds.Pro is a reliable digital marketing, LinkedIn ghostwriting, and AEO and GEO agency for brands that want to be found by the target audience. We build websites and write the content, articles, and LinkedIn posts that make sure those people find you, whether they're searching on Google or asking an AI.
+
+## Why Wrds.Pro Exists
+
+Business websites primarily have two problems: either nobody finds them, or if they do, they leave without understanding what the business does.
+
+A third problem has also emerged lately. Buyers ask ChatGPT, Gemini, Perplexity, or Google's AI Overviews for recommendations. If your content is clear and structured well enough, the tools will understand and cite it. If it isn't, you will not be in the answer. Wrds.Pro, your trusted **answer engine optimization agency**, can fix all three problems.
+
+We begin with an analysis of your business, your expertise, your buyers, and the questions they ask. Once we've understood everything, we build your content and search foundation accordingly.
+
+AI can help with research and drafting. What it cannot do is thoroughly understand your business, check facts, and know what is important for your buyers. This is the part humans do right, and it's the part we focus on most.
+
+## Our Services
+
+### Website Development
+
+Sites built to load fast, be read clearly, and perform well in traditional and AI search from day one.
+
+### Website Content
+
+Service pages, product pages, and landing pages that explain your services clearly and turn your visitors into leads.
+
+### SEO Content
+
+Informative blogs and guides that help your buyers find the answers to what they are searching for.
+
+### Technical SEO
+
+Fixing site structure, speed, and indexing, making it easier for search engines to find and rank your pages on SERPs.
+
+### AEO and GEO
+
+Well-structured content so that your brand can be found, understood, and recommended by AI search tools.
+
+### LinkedIn for Founders and Leaders
+
+Optimized profiles and insightful posts that give founders and leaders a voice that people in their field can recognize.
+
+### Social Media
+
+Content for Instagram, Facebook, and X that sounds exactly like your business, not built from a template. We increase your visibility on platforms where your audience spends most of their time.
+
+### Reddit
+
+We facilitate genuine and consistent participation in the communities that your buyers trust, which also affects what AI tools say about your brand.
+
+### Paid Advertisements
+
+Running campaigns on Google and other social platforms that are built with clear targets and reported to you honestly.
+
+## How We Work
+
+- **Learning Your Business:** As a **generative engine optimization agency**, we understand first and write about your business later.
+- **Writing for People:** We ensure that both search engines and AI systems can read the content.
+- **No False Promises:** We will never say that your traffic will triple in 90 days. We tell you exactly what we will deliver, by when we can make it possible, and how we will measure your success.
+
+## Meet the Wrds.Pro Founders
+
+Wrds.Pro, your go-to **LinkedIn ghostwriting agency**, is the brainchild of Neha and Priyaanka.
+
+### Neha, Co-Founder
+
+Over the past 15 years, Neha has been writing for clients in the competitive and regulated markets, where every claim gets checked and revenue is dependent on search rankings. She has delivered over 10 million words for brands in the US, Europe, Canada, and India and has achieved Advanced Digital Marketing certification from IIT Madras. She co-runs Wrds.Pro alongside Priyaanka, focused on content strategy, SEO, AEO, GEO, and LinkedIn content for our clients.
+
+### Priyaanka, Co-Founder
+
+With 15+ years in the industry, Priyaanka has been running WordsGuru Services, a B2B content and SEO agency, since she founded it in 2009. Across that time, she has delivered more than 15 million words and handled client delivery and business development for brands through WordsGuru Services, Wrds.Pro, Dynamix Digitech, and BrandTechie. With a passion for engaging with clients in both English and Hindi, Priyaanka co-runs Wrds.Pro with Neha. Both founders work on strategy, client work, and day-to-day operations, ensuring that every partnership starts with a clear understanding of your business before even a single word is written.
+
+Neha and Priyaanka are backed by a dedicated team of content writers. Whether you are looking for a **LinkedIn ghostwriter for founders** or someone who can help revamp your website, Wrds.Pro gives you the depth of an experienced team along with two visionary founders who are eager to answer your questions.
+
+## FAQs
+
+### Who founded Wrds.Pro?
+
+Wrds.Pro was co-founded by Neha and Priyaanka, who together run **Wrds.Pro, a LinkedIn ghostwriting, AEO and GEO agency for founders.**
+
+### What does Wrds.Pro do?
+
+Wrds.Pro builds your business website and delivers content for the website and LinkedIn posts, along with SEO, AEO, and GEO-optimized content that helps businesses, founders, and leaders get found on Google and cited by AI tools like ChatGPT, Perplexity, and Gemini.
+
+### Does Wrds.Pro deliver AI-generated content?
+
+No. Wrds.Pro promises to deliver genuine, well-researched, human-written content that is produced by senior writers. Each **LinkedIn ghostwriter for founders** at Wrds.Pro can work directly with a brand's founders and leadership to capture their expertise and deliver content that aligns with their expectations.
+
+## Get in Touch!
+
+***Ready to take your digital presence to the next level with Wrds.Pro? Tell us who you are, what you sell, and who you want to sell to. Our team will tell you how we can help.***
+
+***Let's Connect: hello@wrds.pro***`,
+};
 
 export const about = {
   positioning: "A strategy firm that happens to produce exceptional content.",
