@@ -77,7 +77,11 @@ For Kapil's business, the three target keyphrases matter the most. Rather than c
 
 Traditional and AI Overview search results, captured live, showing Digitalrajee.com's page one placement:
 
+![Fig. 1](/case-studies/digital-rajee-fig1.png)
+
 *Fig. 1: Page one organic ranking for "AI powered digital marketing expert in Delhi"*
+
+![Fig. 2](/case-studies/digital-rajee-fig2.png)
 
 *Fig. 2: #1 organic ranking and AI Overview citation for "AI powered digital marketing expert in India"*`,
   },
@@ -155,25 +159,47 @@ Thanks to the consistently high-quality monthly output, GEO-optimization efforts
 
 Here are the live Google search results, captured to show Credlix's citations in AI Overviews and organic rankings on the first page for 10+ search terms.
 
+![Fig. 1](/case-studies/credlix-fig1.png)
+
 *Fig. 1: All three citations in Google's AI Overviews for "import factoring documents required"*
+
+![Fig. 2](/case-studies/credlix-fig2.png)
 
 *Fig. 2: Credlix cited alongside RBI in Google's AI Overviews for "FEMA compliance for exporters: key RBI rules on realisation and repatriation"*
 
+![Fig. 3](/case-studies/credlix-fig3.png)
+
 *Fig. 3: Ranked #2, right below DGFT in organic ranking for traditional searches for "EPCG scheme explained"*
+
+![Fig. 4](/case-studies/credlix-fig4.png)
 
 *Fig. 4: Ranked #2, right below GST Council in organic ranking for traditional searches and cited in Google's AI Overviews for "Reverse Charge Mechanism (RCM) under GST"*
 
+![Fig. 5](/case-studies/credlix-fig5.png)
+
 *Fig. 5: Ranked #1 in organic ranking for traditional searches for "Open account trade vs letter of credit"*
+
+![Fig. 6](/case-studies/credlix-fig6.png)
 
 *Fig. 6: Credlix cited in Google's AI Overviews for "Open account trade vs letter of credit"*
 
+![Fig. 7](/case-studies/credlix-fig7.png)
+
 *Fig. 7: Two blogs ranking #1 and #4 in organic ranking for traditional searches and two citations in Google's AI Overviews for "Export factoring vs traditional loans"*
+
+![Fig. 8](/case-studies/credlix-fig8.png)
 
 *Fig. 8: Ranked #1, above the official IFSCA website in organic ranking for traditional searches and cited in Google's AI Overviews for "IFSCA, GIFT City, and export factoring"*
 
+![Fig. 9](/case-studies/credlix-fig9.png)
+
 *Fig. 9: Ranked #1 in organic ranking for traditional searches and cited in Google's AI Overviews for "TReDS Platform guide"*
 
+![Fig. 10](/case-studies/credlix-fig10.png)
+
 *Fig. 10: Ranked #1 in organic ranking for traditional searches and cited in Google's AI Overviews for "Bank vs NBFC bill discounting"*
+
+![Fig. 11](/case-studies/credlix-fig11.png)
 
 *Fig. 11: Ranked #1 in organic ranking for traditional searches and cited in Google's AI Overviews for "ECGC vs private trade credit insurance"*
 
@@ -258,19 +284,35 @@ The point of contact confirmed that the work met the expected standards and also
 
 Google search results showing TDI City Kundli's AI Overview citation, answer placement, organic rankings, and local search presence for multiple high-intent keyphrases:
 
+![Fig. 1](/case-studies/tdi-city-kundli-fig1.png)
+
 *Fig. 1: Google AI Overview listing TDI City Kundli for largest integrated township in Sonipat*
+
+![Fig. 2](/case-studies/tdi-city-kundli-fig2.png)
 
 *Fig. 2: Google organic search result ranking TDI City Kundli #2 for largest integrated township in Sonipat*
 
+![Fig. 3](/case-studies/tdi-city-kundli-fig3.png)
+
 *Fig. 3: Google AI Overview and #1 organic ranking for modern township development Kundli*
+
+![Fig. 4](/case-studies/tdi-city-kundli-fig4.png)
 
 *Fig. 4: Google AI Overview citing TDI City Kundli for integrated township residential Sonipat*
 
+![Fig. 5](/case-studies/tdi-city-kundli-fig5.png)
+
 *Fig. 5: Google AI Overview listing TDI City Kundli for modern amenities apartments Sonipat*
+
+![Fig. 6](/case-studies/tdi-city-kundli-fig6.png)
 
 *Fig. 6: Google search result ranking Tuscan City Floors #1 for 149 floors residential project Kundli*
 
+![Fig. 7](/case-studies/tdi-city-kundli-fig7.png)
+
 *Fig. 7: Google page-one organic result for TDI City Kundli on integrated township Sonipat search*
+
+![Fig. 8](/case-studies/tdi-city-kundli-fig8.png)
 
 *Fig. 8: TDI City Kundli local search visibility for shopping mall Sonipat*
 

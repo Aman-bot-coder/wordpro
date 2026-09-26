@@ -9,7 +9,8 @@
     "lint": "eslint",
     "db:setup": "tsx scripts/db-setup.ts",
     "seo:audit": "tsx scripts/seo-audit.ts",
-    "content:setup": "tsx scripts/content-db-setup.ts"
+    "content:setup": "tsx scripts/content-db-setup.ts",
+    "content:resync": "tsx scripts/content-resync.ts"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.8",

@@ -30,6 +30,14 @@ export function Prose({ children }: { children: string }) {
           strong: (props) => <strong className="font-semibold text-navy" {...props} />,
           em: (props) => <em className="italic" {...props} />,
           a: (props) => <a className="text-royal underline underline-offset-2" {...props} />,
+          img: (props) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className="mt-8 w-full rounded-2xl border border-navy/10 shadow-sm"
+              alt={props.alt ?? ""}
+              {...props}
+            />
+          ),
           blockquote: (props) => (
             <blockquote className="mt-6 border-l-4 border-l-[var(--color-yellow)] bg-gray-light py-4 pl-6 pr-4 text-lg italic text-navy" {...props} />
           ),
