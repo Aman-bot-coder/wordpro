@@ -136,9 +136,9 @@ export const seoEntries: SeoEntry[] = [
   },
   {
     path: "/pricing",
-    title: "Pricing",
+    title: "Wrds.Pro Pricing Plans for LinkedIn, SEO, AEO, and GEO",
     description:
-      "Foundation at $899/month, Authority at $1,999/month and a custom Partner plan. Eight founders accepted per quarter, by design.",
+      "Get clear and transparent Wrds.Pro pricing for LinkedIn ghostwriting, SEO, AEO, and GEO content. Our plans are for founders who want to build authority on Google and get cited by AI.",
     focusKeyword: "founder ghostwriting pricing",
     keywords: [
       "founder ghostwriting pricing",
