@@ -1,6 +1,13 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
+// react-markdown passes its AST `node` to every renderer; keep it off the DOM.
+function omitNode<T extends { node?: unknown }>(props: T): Omit<T, "node"> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { node, ...rest } = props;
+  return rest;
+}
+
 // Renders article/case-study body markdown in the site's editorial style.
 // Content is authored verbatim from source docs; this only styles it.
 export function Prose({ children }: { children: string }) {
@@ -10,25 +17,25 @@ export function Prose({ children }: { children: string }) {
         remarkPlugins={[remarkGfm]}
         components={{
           h1: (props) => (
-            <h1 className="text-balance mt-12 text-4xl font-semibold leading-tight tracking-tight text-navy first:mt-0 md:text-5xl" {...props} />
+            <h1 className="text-balance mt-12 text-4xl font-semibold leading-tight tracking-tight text-navy first:mt-0 md:text-5xl" {...omitNode(props)} />
           ),
           h2: (props) => (
-            <h2 className="mt-12 text-2xl font-semibold tracking-tight text-navy md:text-3xl" {...props} />
+            <h2 className="mt-12 text-2xl font-semibold tracking-tight text-navy md:text-3xl" {...omitNode(props)} />
           ),
           h3: (props) => (
-            <h3 className="mt-8 text-xl font-semibold text-navy" {...props} />
+            <h3 className="mt-8 text-xl font-semibold text-navy" {...omitNode(props)} />
           ),
-          p: (props) => <p className="mt-5 text-[17px] leading-relaxed text-gray-dark" {...props} />,
-          ul: (props) => <ul className="mt-5 space-y-2 text-[17px] leading-relaxed text-gray-dark" {...props} />,
-          ol: (props) => <ol className="mt-5 list-decimal space-y-2 pl-5 text-[17px] leading-relaxed text-gray-dark" {...props} />,
+          p: (props) => <p className="mt-5 text-[17px] leading-relaxed text-gray-dark" {...omitNode(props)} />,
+          ul: (props) => <ul className="mt-5 space-y-2 text-[17px] leading-relaxed text-gray-dark" {...omitNode(props)} />,
+          ol: (props) => <ol className="mt-5 list-decimal space-y-2 pl-5 text-[17px] leading-relaxed text-gray-dark" {...omitNode(props)} />,
           li: (props) => (
             <li className="ml-1 flex gap-3 [&>ul]:mt-2 [&>ul]:w-full">
               <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-royal" aria-hidden />
-              <span {...props} />
+              <span {...omitNode(props)} />
             </li>
           ),
-          strong: (props) => <strong className="font-semibold text-navy" {...props} />,
-          em: (props) => <em className="italic" {...props} />,
+          strong: (props) => <strong className="font-semibold text-navy" {...omitNode(props)} />,
+          em: (props) => <em className="italic" {...omitNode(props)} />,
           a: ({ href, ...props }) => {
             const external = typeof href === "string" && /^https?:\/\//.test(href);
             return (
@@ -36,7 +43,7 @@ export function Prose({ children }: { children: string }) {
                 href={href}
                 className="text-royal underline underline-offset-2"
                 {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                {...props}
+                {...omitNode(props)}
               />
             );
           },
@@ -45,21 +52,21 @@ export function Prose({ children }: { children: string }) {
             <img
               className="mt-8 w-full rounded-2xl border border-navy/10 shadow-sm"
               alt={props.alt ?? ""}
-              {...props}
+              {...omitNode(props)}
             />
           ),
           blockquote: (props) => (
-            <blockquote className="mt-6 border-l-4 border-l-[var(--color-yellow)] bg-gray-light py-4 pl-6 pr-4 text-lg italic text-navy" {...props} />
+            <blockquote className="mt-6 border-l-4 border-l-[var(--color-yellow)] bg-gray-light py-4 pl-6 pr-4 text-lg italic text-navy" {...omitNode(props)} />
           ),
           table: (props) => (
             <div className="mt-6 overflow-x-auto">
-              <table className="w-full border-collapse text-sm text-gray-dark" {...props} />
+              <table className="w-full border-collapse text-sm text-gray-dark" {...omitNode(props)} />
             </div>
           ),
           th: (props) => (
-            <th className="border border-navy/15 bg-gray-light px-4 py-3 text-left font-semibold text-navy" {...props} />
+            <th className="border border-navy/15 bg-gray-light px-4 py-3 text-left font-semibold text-navy" {...omitNode(props)} />
           ),
-          td: (props) => <td className="border border-navy/10 px-4 py-3 align-top" {...props} />,
+          td: (props) => <td className="border border-navy/10 px-4 py-3 align-top" {...omitNode(props)} />,
           hr: () => <hr className="mt-10 border-navy/10" />,
         }}
       >
