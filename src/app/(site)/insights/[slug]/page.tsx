@@ -5,6 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import { Prose } from "@/components/Prose";
 import { CTASection } from "@/components/CTASection";
 import { getBlog } from "@/lib/content-store";
+import { site } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
 
@@ -60,6 +61,16 @@ export default async function InsightDetail({
       <section className="px-6 py-16">
         <div className="mx-auto max-w-3xl">
           <Prose>{article.body}</Prose>
+          <div className="mt-12 border-t border-navy/10 pt-10">
+            <a
+              href={site.booking}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-yellow)] px-7 py-4 text-sm font-semibold text-navy transition-colors hover:bg-[var(--color-yellow-bright)]"
+            >
+              Book a Free Authority Audit <span aria-hidden>→</span>
+            </a>
+          </div>
         </div>
       </section>
 

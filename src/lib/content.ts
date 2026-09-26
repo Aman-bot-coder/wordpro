@@ -7,7 +7,7 @@ export const site = {
   email: "hello@wrds.pro",
   linkedin: "https://linkedin.com/company/wrdspro/",
   twitter: "https://x.com/Wrdspro",
-  booking: "https://wrdspro.zohobookings.in",
+  booking: "https://wrdspro.zohobookings.in/#/Wrds.pro",
 };
 
 export const nav = [
