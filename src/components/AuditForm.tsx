@@ -5,6 +5,40 @@ import { site } from "@/lib/content";
 
 export function AuditForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError(null);
+    setSending(true);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const payload = {
+      name: fd.get("name"),
+      email: fd.get("email"),
+      company: fd.get("company"),
+      linkedin: fd.get("linkedin"),
+      challenge: fd.get("challenge"),
+      goal: fd.get("goal"),
+    };
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
+  }
 
   if (submitted) {
     return (
@@ -18,13 +52,7 @@ export function AuditForm() {
   }
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
-      className="glass grid gap-6 rounded-2xl p-10"
-    >
+    <form onSubmit={handleSubmit} className="glass grid gap-6 rounded-2xl p-10">
       <div className="grid gap-6 sm:grid-cols-2">
         <Field label="Full name" name="name" required />
         <Field label="Work email" name="email" type="email" required />
@@ -43,11 +71,17 @@ export function AuditForm() {
         textarea
         required
       />
+      {error && (
+        <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
+          {error}
+        </p>
+      )}
       <button
         type="submit"
-        className="mt-2 w-full rounded-full bg-[var(--color-yellow)] px-7 py-4 text-sm font-semibold text-navy transition-colors hover:bg-[var(--color-yellow-bright)]"
+        disabled={sending}
+        className="mt-2 w-full rounded-full bg-[var(--color-yellow)] px-7 py-4 text-sm font-semibold text-navy transition-colors hover:bg-[var(--color-yellow-bright)] disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Submit Application →
+        {sending ? "Sending…" : "Submit Application →"}
       </button>
       <p className="text-center text-xs text-gray-dark">
         Prefer email? Reach us directly at{" "}

@@ -29,7 +29,17 @@ export function Prose({ children }: { children: string }) {
           ),
           strong: (props) => <strong className="font-semibold text-navy" {...props} />,
           em: (props) => <em className="italic" {...props} />,
-          a: (props) => <a className="text-royal underline underline-offset-2" {...props} />,
+          a: ({ href, ...props }) => {
+            const external = typeof href === "string" && /^https?:\/\//.test(href);
+            return (
+              <a
+                href={href}
+                className="text-royal underline underline-offset-2"
+                {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                {...props}
+              />
+            );
+          },
           img: (props) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img
