@@ -49,6 +49,11 @@ export const homeDiscovery = {
   closing: "That's where Wrds.Pro comes in.",
 };
 
+export const homeSubServicesIntro = {
+  title: "All Our Services Explained",
+  body: "In today's world, you need a range of services, and we deliver. One package, numerous different sources, with credible results across all three key platforms.",
+};
+
 export const homeSubServices = [
   {
     k: "LinkedIn Marketing and Ghostwriting",
