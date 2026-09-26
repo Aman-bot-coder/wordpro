@@ -10,12 +10,7 @@ import { AnimatedCounter } from "@/components/AnimatedCounter";
 import {
   hero,
   stats,
-  pricing,
   homeDiscovery,
-  process,
-  idealClient,
-  capacity,
-  theSystem,
   homeSubServices,
   homeServices,
   homeWhy,
@@ -61,88 +56,28 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* THREE DISCOVERY LAYERS, ONE SERVICE */}
-      <section className="border-t border-navy/5 px-6 py-28">
-        <div className="mx-auto max-w-7xl">
+      {/* THREE DISCOVERY LAYERS, ONE SERVICE (cinematic dark) */}
+      <section className="grid-texture-dark noise relative overflow-hidden bg-navy px-6 py-28 text-white">
+        <div className="pointer-events-none absolute -top-20 right-0 h-[420px] w-[420px] rounded-full bg-royal/20 blur-[140px]" />
+        <div className="relative mx-auto max-w-7xl">
           <Reveal>
-            <SectionHeader eyebrow="Three Layers, One Service" title={homeDiscovery.title} body={homeDiscovery.body} />
+            <SectionHeader dark eyebrow="Three Layers, One Service" title={homeDiscovery.title} body={homeDiscovery.body} />
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {homeDiscovery.layers.map((layer, i) => (
               <Reveal key={layer.k} delay={i * 0.08}>
-                <GlassCard className="h-full p-8 transition-transform duration-300 hover:-translate-y-1.5">
-                  <div className="font-mono text-sm text-royal">0{i + 1}</div>
-                  <h3 className="mt-3 text-2xl font-semibold text-navy">{layer.k}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-gray-dark">{layer.v}</p>
-                </GlassCard>
+                <div className="glass-dark h-full rounded-2xl p-8 transition-transform duration-300 hover:-translate-y-1.5">
+                  <div className="font-mono text-sm text-[var(--color-yellow)]">0{i + 1}</div>
+                  <h3 className="mt-3 text-2xl font-semibold text-white">{layer.k}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/70">{layer.v}</p>
+                </div>
               </Reveal>
             ))}
           </div>
           <Reveal className="mt-10">
-            <p className="text-lg font-medium text-navy">{homeDiscovery.closing}</p>
+            <p className="text-lg font-medium text-white">{homeDiscovery.closing}</p>
           </Reveal>
         </div>
-      </section>
-
-      {/* THE TIMELINE (doc: Week-by-Week Developments) */}
-      <section className="grid-texture-dark border-y border-white/10 bg-navy px-6 py-28 text-white">
-        <div className="mx-auto max-w-6xl">
-          <Reveal>
-            <div className="eyebrow text-[var(--color-yellow)]">The Timeline</div>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">{theSystem.timelineTitle}</h2>
-          </Reveal>
-          <div className="relative mt-16 grid gap-8 md:grid-cols-5">
-            <div className="absolute left-0 right-0 top-[52px] hidden h-px bg-gradient-to-r from-royal via-[var(--color-yellow)] to-royal md:block" />
-            {process.map((step, i) => (
-              <Reveal key={step.n} delay={i * 0.08} className="relative">
-                <div className="eyebrow text-white/50">{step.phase}</div>
-                <div className="relative z-10 mt-3 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-yellow)] font-mono text-sm font-bold text-navy">
-                  {step.n}
-                </div>
-                <h3 className="mt-4 text-lg font-semibold">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/60">{step.body}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* BUILT FOR / NOT A FIT / CAPACITY (doc3) */}
-      <section className="px-6 py-28">
-        <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2">
-          <Reveal>
-            <GlassCard className="h-full p-10">
-              <div className="eyebrow text-royal">Built For</div>
-              <ul className="mt-4 space-y-3 text-gray-dark">
-                {idealClient.fit.map((f) => (
-                  <li key={f} className="flex gap-2"><span className="text-royal">✓</span>{f}</li>
-                ))}
-              </ul>
-            </GlassCard>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <GlassCard className="h-full p-10">
-              <div className="eyebrow text-gray-dark">Not a Fit if You&apos;re</div>
-              <ul className="mt-4 space-y-3 text-gray-dark">
-                {idealClient.notFit.map((f) => (
-                  <li key={f} className="flex gap-2"><span className="text-navy/30">✕</span>{f}</li>
-                ))}
-              </ul>
-            </GlassCard>
-          </Reveal>
-        </div>
-        <Reveal className="mx-auto mt-10 max-w-6xl">
-          <p className="eyebrow text-navy/50">Capacity</p>
-          <p className="mt-2 max-w-2xl text-lg text-gray-dark">{capacity}</p>
-        </Reveal>
-        <Reveal className="mx-auto mt-16 max-w-3xl text-center">
-          <p className="text-balance text-2xl font-semibold italic leading-snug text-navy md:text-3xl">
-            {theSystem.closing}
-          </p>
-          <div className="mt-8 flex justify-center">
-            <Button href="/contact">Book Your Authority Audit</Button>
-          </div>
-        </Reveal>
       </section>
 
       {/* SERVICE SUB-SECTIONS */}
@@ -321,42 +256,6 @@ export default async function Home() {
                 </ul>
               </GlassCard>
             </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* PRICING PREVIEW */}
-      <section className="px-6 py-28">
-        <div className="mx-auto max-w-7xl">
-          <Reveal>
-            <SectionHeader eyebrow="Investment" title="Plans built around your depth of authority-building." align="center" />
-          </Reveal>
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {pricing.map((plan, i) => (
-              <Reveal key={plan.id} delay={i * 0.08}>
-                <div className={`relative flex h-full flex-col rounded-2xl p-8 ${plan.tag ? "glass border-2 border-[var(--color-yellow)]" : "glass"}`}>
-                  {plan.tag && (
-                    <div className="absolute -top-3 left-8 rounded-full bg-[var(--color-yellow)] px-3 py-1 text-xs font-bold text-navy">
-                      {plan.tag}
-                    </div>
-                  )}
-                  <h3 className="text-xl font-semibold text-navy">{plan.name}</h3>
-                  <div className="mt-3 flex items-baseline gap-1">
-                    <span className="text-3xl font-bold text-navy">{plan.price}</span>
-                    <span className="text-sm text-gray-dark">{plan.period}</span>
-                  </div>
-                  <p className="mt-2 text-sm text-gray-dark">{plan.audience}</p>
-                  <ul className="mt-6 flex-1 space-y-2 text-sm text-gray-dark">
-                    {plan.features.slice(0, 4).map((f) => (
-                      <li key={f} className="flex gap-2"><span className="text-royal">—</span>{f}</li>
-                    ))}
-                  </ul>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <div className="mt-12 text-center">
-            <Button href="/pricing">See Full Pricing</Button>
           </div>
         </div>
       </section>
