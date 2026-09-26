@@ -221,9 +221,9 @@ export const seoEntries: SeoEntry[] = [
   },
   {
     path: "/contact",
-    title: "Book Your Authority Audit",
+    title: "Contact Wrds.Pro to Strengthen Founder Authority and Digital Visibility",
     description:
-      "Build the authority before you need it. Book a 30-minute Authority Audit to map your current authority gap and whether wrds.pro is the right fit.",
+      "Book a 30-minute Authority Audit with Wrds.Pro to assess your LinkedIn authority and AI discoverability.",
     focusKeyword: "authority audit",
     keywords: [
       "authority audit",
