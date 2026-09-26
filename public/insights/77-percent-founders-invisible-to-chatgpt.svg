@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="77% of Top-Ranking Founders Are Invisible to ChatGPT">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a2350"/><stop offset="1" stop-color="#071a3d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="82%" cy="18%" r="55%">
+      <stop offset="0" stop-color="#145cff" stop-opacity="0.55"/><stop offset="1" stop-color="#145cff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <text x="90" y="120" font-family="Verdana,Geneva,sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#ffd43b">AI DISCOVERY</text>
+  <text font-family="Georgia,'Times New Roman',serif" font-weight="700" fill="#ffffff"><tspan x="90" y="262">77% of Top-Ranking</tspan><tspan x="90" y="340">Founders Are Invisible</tspan><tspan x="90" y="418">to ChatGPT</tspan></text>
+  <rect x="90" y="498" width="120" height="5" rx="2.5" fill="#ffd43b"/>
+  <text x="90" y="565" font-family="Verdana,Geneva,sans-serif" font-size="26" font-weight="800" letter-spacing="2" fill="#ffffff">WRDS.PRO</text>
+  <text x="1110" y="565" text-anchor="end" font-family="Verdana,Geneva,sans-serif" font-size="18" letter-spacing="3" fill="#ffffff" fill-opacity="0.6">INSIGHTS</text>
+</svg>
