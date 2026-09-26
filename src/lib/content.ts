@@ -535,6 +535,34 @@ export const contact = {
   cta: "Book Your 30-Minute Authority Audit",
 };
 
+// Contact page — verbatim from the Wrds.Pro "Contact" doc.
+export const contactPage = {
+  headline: "Give Us The Bigger Picture: Your Business, Your Market, And Your Ambitions.",
+  orLabel: "Or",
+  lead: "Let's talk about your business. The space you are shaping. The direction you are taking.",
+  intro: "We will look at where your authority stands today, where the gaps are, and what it would take to close them. No generic sales pitch. No obligation to sign. It's just a simple discussion about your business and the future of your business.",
+  waysTitle: "Two Ways To Start",
+  optionOne: {
+    label: "Option one",
+    title: "Book your Authority Audit",
+    body: "In a 30-minute authority audit, we assess your LinkedIn presence across Google and AI-driven responses, and the online representation of your category. You will get to know where you are being seen, where competitors are capturing attention and where the opportunities are.",
+    body2: "We'll walk you through the findings live, with a clear view of what needs to change and where to begin",
+    cta: "Book Your Authority Audit",
+  },
+  optionTwo: {
+    label: "Option two",
+    title: "Tell Us About Your Business",
+    body: "Fill in the form below to share some details about your company and your audience. We want to know the challenge you are looking to solve. Share matters about your business, whether you are preparing for a fundraise or building a category.",
+    body2: "A member of our team will review your message and respond personally. No automated follow-up sequences. No generic pitch deck.",
+  },
+  beforeTitle: "Before you reach out",
+  beforePoints: [
+    "We work with just 8 founders per quarter, ensuring every engagement gets the attention it deserves.",
+    "Outside Seed to Series B? Get in touch. We'll give you an honest assessment of whether the timing makes sense.",
+    "No generic questionnaires. Every engagement begins with a conversation about your business and what you need to achieve.",
+  ],
+};
+
 // ---------------------------------------------------------------------------
 // The Work page — source: wrds.pro "The Work" doc.
 // ---------------------------------------------------------------------------
